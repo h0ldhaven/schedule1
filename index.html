@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Schedule1</title>
+    <!-- META -->
+    <meta property="og:site_name" content="Schedule1-Wiki">
+    <meta property="og:title" content="Wiki pour Schedule1">
+    <meta property="og:description" content="Une application pour comprendre comment fabriquer des choses dans Schedule1.">
+    <meta property="og:creator" content="holdhaven">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="https://h0ldhaven.github.io/schedule1/images/png/preview_site.png">
+    <meta property="og:image:alt" content="Image de prévisualisation de l'application">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://h0ldhaven.github.io/schedule1/">
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
